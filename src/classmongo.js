@@ -17,7 +17,7 @@ const classmongo = {
             link:dt.link,
         })
         
-        medicamento.find({'nome':dt.nome})
+        medicamento.find({'farmacia':dt.farmacia, 'nome':dt.nome})
         .then(function(res){
             if(res.length===0){
                 novoDado.save();
